@@ -1,10 +1,13 @@
 const container = document.getElementById("container");
 const slider = document.getElementById("myslider");
 const output = document.getElementById("output");
-output.innerHTML = slider.value + " x " + slider.value;
+
+output.innerText = slider.value + " x " + slider.value;
 
 slider.oninput = function (){
-    output.innerHTML = slider.value + " x " + slider.value;
+    output.innerText = slider.value + " x " + slider.value;
+    resetGrid();
+    makeGrid(slider.value);
 }
 
 function makeGrid(number) {
@@ -21,3 +24,12 @@ function makeGrid(number) {
 }
 
 makeGrid(slider.value);
+
+function resetGrid(){
+    container.style.setProperty("--grid-row", "none");
+    container.style.setProperty("--grid-column", "none");
+
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
