@@ -24,6 +24,10 @@ body {
     padding: 1px;
 }
 
+.color-container{
+    margin:25px;
+}
+
 .slider {
     -webkit-appearance: none;
     appearance: none;
@@ -35,7 +39,8 @@ body {
     -webkit-transition: .2s;
     transition: opacity .2s;
     margin-top: 25px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
+    --slidercolor: black;
 }
 
 .slider:hover {
@@ -47,13 +52,13 @@ body {
     appearance: none;
     width: 25px;
     height: 50px;
-    background: green;
+    background: var(--slidercolor);
     cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: green;
+    background: var(--slidercolor);
     cursor: pointer;
 }
