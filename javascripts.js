@@ -1,4 +1,11 @@
 const container = document.getElementById("container");
+const slider = document.getElementById("myslider");
+const output = document.getElementById("output");
+output.innerHTML = slider.value + " x " + slider.value;
+
+slider.oninput = function (){
+    output.innerHTML = slider.value + " x " + slider.value;
+}
 
 function makeGrid(number) {
     container.style.setProperty("--grid-row", number);
@@ -6,11 +13,11 @@ function makeGrid(number) {
 
     for (i = 0; i < (number * number); i++) {
         const cell = document.createElement("div");
-        cell.addEventListener("mouseover", (e) => {
-            e.target.style.backgroundColor = "black";
+        cell.addEventListener("mouseover", (event) => {
+            event.target.style.backgroundColor = "black";
         })
         container.appendChild(cell).classList.add("grid-item");
     }
 }
 
-makeGrid(16);
+makeGrid(slider.value);
