@@ -10,13 +10,13 @@ let randomBlue = Math.floor(Math.random() * 256);
 
 slider.style.setProperty("--slidercolor", currentColor);
 
-const colorButton = document.getElementById("colorbutton").addEventListener("click", ()=>{
+const colorButton = document.getElementById("colorbutton").addEventListener("click", () => {
     currentMode = "default";
     resetGrid();
     makeGrid(slider.value);
 })
 
-const rainbowButton = document.getElementById("rainbowbutton").addEventListener("click", ()=>{
+const rainbowButton = document.getElementById("rainbowbutton").addEventListener("click", () => {
     currentMode = "rainbow";
     resetGrid();
     makeGrid(slider.value);

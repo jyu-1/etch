@@ -24,8 +24,8 @@ body {
     padding: 1px;
 }
 
-.color-container{
-    margin:25px;
+.color-container {
+    margin: 25px;
 }
 
 .slider {
@@ -61,4 +61,10 @@ body {
     height: 25px;
     background: var(--slidercolor);
     cursor: pointer;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    margin: 10px;
 }
